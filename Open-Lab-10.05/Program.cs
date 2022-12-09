@@ -2,7 +2,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace Open_Lab_10._04
+namespace Open_Lab_10._05
 {
     internal class Program
     {
@@ -23,7 +23,7 @@ namespace Open_Lab_10._04
             Book LOTR3 = new Book("The Lord of the Rings 3", 576);
             Console.WriteLine(LOTR3.ToString());
 
-            Book Hobit = new Book("Hobit", 304, "Fantasy", "John Ronald Reuel Tolkien", 1954);
+            Book Hobit = new Book("Hobit", 304, Book.categoryList[3], "John Ronald Reuel Tolkien", 1954);
             Console.WriteLine(Hobit.ToString());
         }
     }
