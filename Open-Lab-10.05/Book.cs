@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Open_Lab_10._05
 {
-    class Book
+    internal class Book
     {
         private string title;
         private int pages;
@@ -17,15 +17,40 @@ namespace Open_Lab_10._05
         private string author;
         private int releaseDate;
 
+        /// <summary>
+        /// list s kategóriami
+        /// </summary>
+        public static List<string> categoryList = new List<string>()
+        {
+            "Detské",
+            "Romantické",
+            "Náučné",
+            "Sci-Fi",
+            "Dobrodružné"
+        };
+
+        /// <summary>
+        /// get a set pre Title
+        /// </summary>
         public string Title
         { get { return title; } set { title = value; } }
-
+        
+        /// <summary>
+        /// get a set pre Pages
+        /// </summary>
         public int Pages
         { get { return pages; } set { pages = value; } }
 
+        /// <summary>
+        /// set pre Category
+        /// </summary>
         public string Category
-        { get { return category; } set { category = value; } }
+        { set { category = value; } }
 
+
+        /// <summary>
+        /// get a set pre ReleaseDate
+        /// </summary>
         public int ReleaseDate
         {
             get => releaseDate;
@@ -43,10 +68,17 @@ namespace Open_Lab_10._05
 
         }
 
+
+        /// <summary>
+        /// get a set pre Author
+        /// </summary>
         public string Author
         { get { return author; } set { author = value; } }
 
-
+        /// <summary>
+        /// constructor bez parametrov
+        /// </summary>
+     
         public Book()
         {
             title = "-1";
@@ -56,6 +88,10 @@ namespace Open_Lab_10._05
             releaseDate = -1;
         }
 
+
+        /// <summary>
+        /// constructor, ktorý nastaví hodnoty pre title a pages
+        /// </summary>
         public Book(string mtitle, int mpages)
         {
             title = mtitle;
@@ -64,6 +100,11 @@ namespace Open_Lab_10._05
             author = "-1";
             releaseDate = -1;
         }
+
+
+        /// <summary>
+        /// constructor, ktorý nastaví všetky hodnoty
+        /// </summary>
 
         public Book(string mtitle, int mpages, string mcategory, string mauthor, int mreleaseDate)
         {
@@ -75,17 +116,9 @@ namespace Open_Lab_10._05
         }
 
 
-        public Book()
-        {
-            var categories = new List<string>();
-            categories.Add("Detské");
-            categories.Add("Romantické");
-            categories.Add("Náučné");
-            categories.Add("Sci-Fi");
-            categories.Add("Dobrodružné");
-
-        }
-
+        /// <summary>
+        /// method, ktorá vracia upravné stringy
+        /// </summary>
 
         public override string ToString()
         {
