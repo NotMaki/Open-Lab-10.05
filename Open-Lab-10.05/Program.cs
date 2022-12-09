@@ -1,6 +1,4 @@
-﻿using Open_Lab_10._03;
-using Open_Lab_10._04;
-using Open_Lab_10._05;
+﻿using Open_Lab_10._05;
 using System;
 using System.Security.Cryptography;
 

@@ -7,9 +7,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Open_Lab_10._03
+namespace Open_Lab_10._05
 {
-    internal class Book
+    class Book
     {
         private string title;
         private int pages;
@@ -74,10 +74,26 @@ namespace Open_Lab_10._03
             releaseDate = mreleaseDate;
         }
 
+
+        public Book()
+        {
+            var categories = new List<string>();
+            categories.Add("Detské");
+            categories.Add("Romantické");
+            categories.Add("Náučné");
+            categories.Add("Sci-Fi");
+            categories.Add("Dobrodružné");
+
+        }
+
+
         public override string ToString()
         {
             return String.Format($"{title}\n{pages}\n{category}\n{author}\n{releaseDate}");
         }
+
+
+        
 
     }
 }
